@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos Históricos</title>
+    <link rel="stylesheet" href="partidos.css">
+</head>
+
+<body>
+    <nav class="category-nav">
+        <a href="index.html">Inicio</a>
+        <a href="canis.html">Canis de Época</a>
+        <a href="pulmones.html">Pulmones de Oro</a>
+        <a href="patadas.html">Patadas del Fútbol</a>
+        <a href="entrenadores.html">Entrenadores</a>
+        <a href="partidos.html" class="active">Partidos Históricos</a>
+        <a href="movera.html">CD Movera</a>
+    </nav>
+    <header class="header-cinema">
+        <h1 class="titulo-principal">PARTIDOS HISTÓRICOS</h1>
+        <p class="subtitulo">PARTIDOS QUE CAMBIARON LA HISTORIA</p>
+    </header>
+
+    <main class="lista-partidos">
+
+        <!-- 1. Brasil 1–7 Alemania -->
+        <section class="match-section" style="background-image: url('BRASILVSALEMANIA.jpg');">
+            <div class="overlay"></div>
+            <div class="match-content">
+                <span class="year-label">MUNDIAL 2014</span>
+                <h2 class="match-score">BRASIL <span class="score">1 – 7</span> ALEMANIA</h2>
+                <div class="separator-silver"></div>
+                <p>
+                    El partido más impactante del siglo XXI. Brasil, anfitrión, campeón histórico, roto en directo por
+                    una Alemania clínica. Cada gol alemán era un puñetazo emocional para millones de personas. Una
+                    humillación irrepetible conocida como el "Mineirazo".
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('BRASILVSALEMANIA.mp4')" class="btn-replay">VER
+                    RESUMEN</a>
+            </div>
+        </section>
+
+        <!-- 2. Liverpool 4–0 Barcelona -->
+        <section class="match-section" style="background-image: url('liverpool.jpg');">
+            <div class="overlay"></div>
+            <div class="match-content">
+                <span class="year-label">CHAMPIONS 2019</span>
+                <h2 class="match-score">LIVERPOOL <span class="score">4 – 0</span> BARCELONA</h2>
+                <div class="separator-silver"></div>
+                <p>
+                    Una remontada mítica en Anfield. Sin Salah, sin Firmino y con un 3–0 en contra, el Liverpool firmó
+                    un partido perfecto. Intensidad, hambre, fe y una jugada eterna: "Corner taken quickly… Origi". Una
+                    obra maestra del espíritu competitivo.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Liverpoolbarca.mp4')" class="btn-replay">VER
+                    RESUMEN</a>
+            </div>
+        </section>
+
+        <!-- 3. Real Madrid 4–1 Atlético -->
+        <section class="match-section" style="background-image: url('realatleti.jpg');">
+            <div class="overlay"></div>
+            <div class="match-content">
+                <span class="year-label">FINAL CHAMPIONS 2014</span>
+                <h2 class="match-score">REAL MADRID <span class="score">4 – 1</span> ATLÉTICO</h2>
+                <div class="separator-silver"></div>
+                <p>
+                    Un clásico moderno. El gol de Ramos en el minuto 93 cambió la historia del club y destrozó al rival
+                    cuando ya tocaba la copa. La prórroga fue un torbellino blanco. La Décima, cargada de emoción y
+                    dramatismo agónico.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Madrides.mp4')" class="btn-replay">VER
+                    RESUMEN</a>
+            </div>
+        </section>
+
+        <!-- 4. Manchester City 3–2 QPR -->
+        <section class="match-section" style="background-image: url('qpr.jpg');">
+            <div class="overlay"></div>
+            <div class="match-content">
+                <span class="year-label">PREMIER LEAGUE 2012</span>
+                <h2 class="match-score">MAN CITY <span class="score">3 – 2</span> QPR</h2>
+                <div class="separator-silver"></div>
+                <p>
+                    El final más loco de la Premier League. Con el título perdido en el minuto 90, Dzeko y Agüero
+                    (93:20)
+                    dieron la vuelta al marcador en dos minutos de locura absoluta. El inicio de la era moderna del
+                    City.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Agueroo.mp4')" class="btn-replay">VER
+                    RESUMEN</a>
+            </div>
+        </section>
+
+        <!-- 5. España 1–0 Holanda -->
+        <section class="match-section" style="background-image: url('espana-vs-holanda-futbol_187299-30772.avif');">
+            <div class="overlay"></div>
+            <div class="match-content">
+                <span class="year-label">FINAL MUNDIAL 2010</span>
+                <h2 class="match-score">ESPAÑA <span class="score">1 – 0</span> HOLANDA</h2>
+                <div class="separator-silver"></div>
+                <p>
+                    Una batalla en Johannesburgo. Patadas, dureza extrema y un combate físico monumental. Ante la
+                    violencia
+                    holandesa, el fútbol de España resistió hasta que Iniesta, en el minuto 116, paró el tiempo y nos
+                    dio
+                    la estrella.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('españaholanda.mp4')" class="btn-replay">VER
+                    RESUMEN</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Video -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <video id="pVideo" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(src) {
+            const modal = document.getElementById("videoModal");
+            const video = document.getElementById("pVideo");
+            video.src = src;
+            modal.style.display = "flex";
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById("videoModal");
+            const video = document.getElementById("pVideo");
+            video.pause();
+            video.src = "";
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById("videoModal");
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }
+    </script>
+    <script src="sticky-nav.js"></script>
+</body>
+
+</html>

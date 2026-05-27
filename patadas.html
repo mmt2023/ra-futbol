@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patadas del Fútbol</title>
+    <link rel="stylesheet" href="patadas.css">
+</head>
+
+<body>
+    <nav class="category-nav">
+        <a href="index.html">Inicio</a>
+        <a href="canis.html">Canis de Época</a>
+        <a href="pulmones.html">Pulmones de Oro</a>
+        <a href="patadas.html" class="active">Patadas del Fútbol</a>
+        <a href="entrenadores.html">Entrenadores</a>
+        <a href="partidos.html">Partidos Históricos</a>
+        <a href="movera.html">CD Movera</a>
+    </nav>
+    <header class="header-patadas">
+        <h1 class="titulo-principal">PATADAS HISTÓRICAS</h1>
+    </header>
+
+    <main class="lista-patadas">
+
+        <!-- 1. De Jong a Xabi Alonso -->
+        <section class="patada-row">
+            <div class="info-patada">
+                <span class="rank-number">01</span>
+                <h2>De Jong a Xabi Alonso</h2>
+                <h3>Final Mundial 2010</h3>
+                <div class="separator-red"></div>
+                <p>
+                    Un karateka en una final del mundo. De Jong elevó la pierna hasta el pecho de Xabi Alonso en una de
+                    las entradas más brutales jamás vistas en una Copa del Mundo. En un partido cargado de tensión, esa
+                    patada se convirtió en símbolo del caos de aquella final.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Criminal Nigel De Jong Karate Kick on Xabi Alonso - Enkigamesh (480p, h264).mp4')" class="btn-video">VER
+                    JUGADA</a>
+            </div>
+        </section>
+
+        <!-- 2. Pepe vs Casquero -->
+        <section class="patada-row">
+            <div class="info-patada">
+                <span class="rank-number">02</span>
+                <h2>Pepe vs Casquero</h2>
+                <h3>Getafe 2009</h3>
+                <div class="separator-red"></div>
+                <p>
+                    Un episodio oscuro que quedó grabado en la memoria del fútbol español. Pepe perdió los nervios y el
+                    control, dejando una secuencia de empujones y patadas nunca vista. Una acción que marcó su carrera y
+                    la historia de la Liga.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Pepe.mp4')" class="btn-video">VER
+                    JUGADA</a>
+            </div>
+        </section>
+
+        <!-- 3. Cantona al Aficionado -->
+        <section class="patada-row">
+            <div class="info-patada">
+                <span class="rank-number">03</span>
+                <h2>Cantona al Aficionado</h2>
+                <h3>Crystal Palace 1995</h3>
+                <div class="separator-red"></div>
+                <p>
+                    Un acto tan surrealista como legendario. Expulsado, discutiendo, y de repente… una patada de kung-fu
+                    hacia la grada. El momento se volvió parte de la cultura pop, trascendiendo el fútbol y
+                    convirtiéndose en icono de rebeldía.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Cantona.mp4')" class="btn-video">VER
+                    JUGADA</a>
+            </div>
+        </section>
+
+        <!-- 4. Roy Keane a Haaland -->
+        <section class="patada-row">
+            <div class="info-patada">
+                <span class="rank-number">04</span>
+                <h2>Roy Keane a Haaland</h2>
+                <h3>Derbi de Manchester 2001</h3>
+                <div class="separator-red"></div>
+                <p>
+                    Una entrada cargada de venganza y resentimiento. Keane ejecutó una patada que dejó al rival tendido
+                    y que significó uno de los momentos más tensos de la Premier League. Una agresión que cambió una
+                    carrera.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('Keane.mp4')" class="btn-video">VER
+                    JUGADA</a>
+            </div>
+        </section>
+
+        <!-- 5. Miguel Angel Albero -->
+        <section class="patada-row">
+            <div class="info-patada">
+                <span class="rank-number">05</span>
+                <h2>Miguel Ángel Albero</h2>
+                <h3>Oliver - Santa Isabel</h3>
+                <div class="separator-red"></div>
+                <p>
+                    Una patada en un partido caliente en la pelea por el ascenso. Un encontronazo brutal en el cual
+                    Miguel Ángel
+                    arrolló a Bassam haciéndole parecer el balón del partido. Dio más vueltas que un coche al volcar.
+                </p>
+                <a href="javascript:void(0)" onclick="openVideoModal('MiguelAngel-to-Basan.mov')" class="btn-video">VER
+                    JUGADA</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Video -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <video id="pVideo" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(src) {
+            const modal = document.getElementById("videoModal");
+            const video = document.getElementById("pVideo");
+            video.src = src;
+            modal.style.display = "flex";
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById("videoModal");
+            const video = document.getElementById("pVideo");
+            video.pause();
+            video.src = "";
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById("videoModal");
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }
+    </script>
+    <script src="sticky-nav.js"></script>
+</body>
+</html>

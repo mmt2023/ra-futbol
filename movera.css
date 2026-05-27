@@ -1,0 +1,162 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-header {
+  background: black;
+  padding: 30px 0 40px 0;
+  text-align: center;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #333;
+}
+
+.category-nav a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.category-nav a:hover,
+.category-nav a.active {
+  color: #ffcc00;
+  border-color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+}
+
+.titulo-principal {
+  font-family: 'Impact', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #ffcc00;
+  margin: 0;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0 #d32f2f, -2px -2px 0 #000;
+  transform: scaleY(1.2);
+}
+
+/* Sección de contenido brutalista */
+.cd-movera {
+  background: repeating-linear-gradient(45deg,
+      #111,
+      #111 20px,
+      #1a1a1a 20px,
+      #1a1a1a 40px);
+  color: #eee;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.movera-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.movera-text {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  background: #000;
+  color: #eee;
+  padding: 60px;
+  border: 6px solid #ffcc00;
+  box-shadow: 20px 20px 0 #ffcc00;
+  /* Sombra sólida agresiva */
+  border-radius: 0;
+  transform: rotate(-1deg);
+  margin: 0 20px;
+}
+
+.movera-text p {
+  margin-bottom: 25px;
+}
+
+.movera-text ul {
+  margin-bottom: 25px;
+  padding-left: 35px;
+}
+
+.movera-text li {
+  margin-bottom: 12px;
+  list-style: square;
+}
+
+.movera-text li::marker {
+  color: #ffcc00;
+  font-size: 1.5rem;
+}
+
+.movera-text em {
+  font-style: normal;
+  color: #fff;
+  border-left: 6px solid #d32f2f;
+  display: block;
+  background: #111;
+  padding: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.movera-text strong {
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.movera-img {
+  display: none;
+}
+
+.firma-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto 35px auto;
+  border-radius: 4px;
+}
+
+.category-nav {
+  transition: all 0.3s ease;
+}
+
+.category-nav.scrolled {
+  padding: 10px 20px !important;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}

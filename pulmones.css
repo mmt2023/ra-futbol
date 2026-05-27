@@ -1,0 +1,165 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-header {
+    background: black;
+    padding: 0 0 40px 0;
+    text-align: center;
+    border-bottom: 2px solid #00ff88;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.category-nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.category-nav a:hover,
+.category-nav a.active {
+    color: #00ff88;
+    border-color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-principal {
+    font-family: 'Teko', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #00ff88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    margin: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.lista-jugadores {
+    display: flex;
+    flex-direction: column;
+}
+
+.jugador-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.jugador-row:nth-child(even) {
+    background: #151515;
+    flex-direction: row-reverse;
+}
+
+.imagen-container {
+    width: 50%;
+    height: 100%;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(80%) contrast(1.2);
+    transition: filter 0.5s ease, transform 0.5s ease;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+
+.jugador-row:nth-child(even) .img-full {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.jugador-row:hover .img-full {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.05);
+}
+
+.info-container {
+    width: 50%;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.numero-rank {
+    font-family: 'Teko', sans-serif;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 0.8;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    user-select: none;
+}
+
+.jugador-row:nth-child(even) .numero-rank {
+    right: auto;
+    left: 40px;
+}
+
+.info-container h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    margin: 0 0 10px 0;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.barra-energia {
+    width: 80px;
+    height: 6px;
+    background: #00ff88;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #bbb;
+    max-width: 600px;
+}
+
+.category-nav {
+    transition: all 0.3s ease;
+}
+.category-nav.scrolled {
+    padding: 10px 20px !important;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
